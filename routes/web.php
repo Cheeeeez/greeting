@@ -29,3 +29,5 @@ Route::get('login', 'LoginController@getLoginForm');
 Route::post('login', 'LoginController@login');
 Route::get('product', 'ProductController@getDiscountForm');
 Route::post('product', 'ProductController@calculateDiscount');
+Route::get('dictionary', 'DictionaryController@getSearchForm');
+Route::post('dictionary', 'DictionaryController@translate');
