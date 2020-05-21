@@ -23,10 +23,11 @@ class DictionaryController extends Controller
         foreach ($arr as $key => $value) {
             if ($key == $keyword) {
                 $result = $value;
-                return view('dictionary', compact('result'));
+                break;
+            } else {
+                $result = 'Không tìm thấy';
             }
         }
-        $result = 'Không tìm thấy';
-        return view('dictionary', compact('result'));
+        return view('dictionary', compact(['keyword', 'result']));
     }
 }

@@ -14,20 +14,24 @@
             text-align: center;
             font-size: 20px;
         }
+
         h1 {
             color: royalblue;
         }
+
         #result {
             color: darkorange;
             margin-top: 25px;
             font-size: 30px;
         }
+
         .container {
             overflow: hidden;
             white-space: nowrap;
             width: 300px;
             margin: auto;
         }
+
         .container input#input_box {
             border-radius: 5px;
             outline: none;
@@ -52,7 +56,7 @@
                 <button type="submit" class="icon"><i class="fas fa-search"></i></button>
             </div>
             <div id="result"><?php if (isset($result)):?>
-            {{$result}}
+                {{$keyword}}: {{$result}}
                 <?php endif;?>
             </div>
         </form>
